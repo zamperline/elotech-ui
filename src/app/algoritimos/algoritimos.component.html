@@ -1,0 +1,228 @@
+<div class="ui-g">
+  <div class="ui-g-6">
+    <p-tabView>
+      <p-tabPanel header="isLucky">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="isLucky()" [formGroup]="formularioIsLucky">
+              <div class="ui-g-12">
+                <li>
+                  <strong>isLucky</strong>: Ticket numbers usually consist of an even number of digits. A ticket number is
+                  considered lucky if the sum of the first half of the digits is equal to the sum of the second half. Given
+                  a ticket number n, determine if it's lucky or not.
+                </li>
+                <li>Example:
+                  <ul>
+                    <li>For n = 1230, the output should be isLucky(n) = true;</li>
+                    <li>For n = 239017, the output should be isLucky(n) = false.</li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Number</label>
+                <input pInputText type="number" name="entrada" formControlName="entrada">
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="isLucky()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="10" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+
+
+
+      <p-tabPanel header="Circle number">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="circleOfNumbers()" [formGroup]="formularioCircleOfNumbers">
+              <div class="ui-g-12">
+                <li>
+                  <strong>Circle number</strong>: Consider integer numbers from 0 to n - 1 written down along the circle in such a way
+                  that the distance between any two neighboring numbers is equal (note that 0 and n - 1 are neighboring, too). Given n
+                  and firstNumber, find the number which is written in the radially opposite position to firstNumber.
+                </li>
+                <li>Example:
+                  <ul>
+                    <li>For n = 10 and firstNumber = 2, the output should be circleOfNumbers(n, firstNumber) = 7.</li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Number</label>
+                <input pInputText type="number" name="entrada1" formControlName="entrada1">
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>First Number</label>
+                <input pInputText type="number" name="entrada2" formControlName="entrada2">
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="circleOfNumbers()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="10" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado2}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+
+
+
+      <p-tabPanel header="Alphabetic">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="alphabeticShift()" [formGroup]="formularioAlphabeticShift">
+              <div class="ui-g-12">
+                <li>
+                  <strong>Alphabetic</strong>: Given a string, replace each of its character by the next one in the English
+                  alphabet (z would be replaced by a).
+                </li>
+                <ul>
+                <li>Example:
+                  <ul>
+                    <li>For inputString = "crazy", the output should be alphabeticShift(inputString) = "dsbaz".</li>
+                  </ul>
+                </li>
+              </ul>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Input String</label>
+                <input pInputText type="text" name="entrada" formControlName="entrada">
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="alphabeticShift()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="10" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado3}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+
+
+
+      <p-tabPanel header="All longest strings">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="allLongestStrings()" [formGroup]="formularioAllLongestStrings">
+              <div class="ui-g-12">
+                <li>
+                  <strong>All longest strings</strong>: Given an array of strings, return another array containing all of its longest strings.
+                </li>
+                <li>Example:
+                  <ul>
+                    <li> * For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Input Array</label>
+                <textarea name="entrada" formControlName="entrada" [rows]="5" [cols]="15" pInputTextarea></textarea>
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="allLongestStrings()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="25" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado4}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+
+
+
+      <p-tabPanel header="Mines">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="minesweeper()" [formGroup]="formularioMinesweeper">
+              <div class="ui-g-12">
+                <li>
+                  <strong>Mines</strong>: In the popular Minesweeper game you have a board with some mines and those cells
+                  that don't contain a mine have a number in it that indicates the total number of mines in the neighboring
+                  cells. Starting off with some arrangement of mines we want to create a Minesweeper game setup.
+                </li>
+                <ul>
+                  <li>Example:</li>
+                </ul>
+                <pre class="code highlight js-syntax-highlight plaintext white" lang="plaintext" v-pre="true">
+                <code>
+                <span id="LC1" class="line" lang="plaintext">matrix = [[true, false, false],</span>
+                <span id="LC2" class="line" lang="plaintext">[false, true, false],</span>
+                <span id="LC3" class="line" lang="plaintext">[false, false, false]]</span>
+                </code>
+                </pre>
+                <ul>
+                  <li>the output should be</li>
+                </ul>
+                <pre class="code highlight js-syntax-highlight plaintext white" lang="plaintext" v-pre="true">
+                <code>
+                <span id="LC1" class="line" lang="plaintext">minesweeper(matrix) = [[1, 2, 1],</span>
+                <span id="LC2" class="line" lang="plaintext">[2, 1, 1],</span>
+                <span id="LC3" class="line" lang="plaintext">[1, 1, 1]]</span>
+                </code>
+                </pre>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Input Matrix</label>
+                <textarea name="entrada" formControlName="entrada" [rows]="5" [cols]="15" pInputTextarea></textarea>
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="minesweeper()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="15" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado5}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+
+
+      
+      <p-tabPanel header="Almost increasing sequence">
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <form autocomplete="off" (ngSubmit)="almostIncreasingSequence()" [formGroup]="formularioAlmostIncreasingSequencer">
+              <div class="ui-g-12">
+                <ul>
+                  <li>
+                    <p>Note: sequence a0, a1, ..., an is considered to be a strictly increasing if a0 &lt; a1 &lt; ... &lt; an. Sequence
+                      containing only one element is also considered to be strictly increasing.</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <p>Example:</p>
+                    <ul>
+                      <li><p>For sequence = [1, 3, 2, 1], the output should be almostIncreasingSequence(sequence) = false.</p></li>
+                      <li><p>There is no one element in this array that can be removed in order to get a strictly increasing sequence.</p></li>
+                      <li><p>For sequence = [1, 3, 2], the output should be almostIncreasingSequence(sequence) = true.</p></li>
+                      <li><p>You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you can remove 2 to get the strictly increasing sequence [1, 3].</p></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-g-12 ui-fluid">
+                <label>Input Sequence</label>
+                <textarea name="entrada" formControlName="entrada" [rows]="5" [cols]="15" pInputTextarea></textarea>
+              </div>
+              <div class="ui-g-12">
+                <button type="button" (click)="almostIncreasingSequence()" pButton label="Executar"></button>
+              </div>
+            </form>
+          </div>
+          <div class="ui-g-6" style="text-align: center; margin-top:10%">
+            <textarea rows="5" cols="10" autoResize="autoResize" style="border:none; font-size:30px;">{{resultado6}}</textarea>
+          </div>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
